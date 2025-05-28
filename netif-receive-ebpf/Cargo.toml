@@ -1,0 +1,17 @@
+[package]
+name = "netif-receive-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+netif-receive-common = { path = "../netif-receive-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "netif-receive"
+path = "src/main.rs"
